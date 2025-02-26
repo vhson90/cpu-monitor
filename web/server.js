@@ -28,11 +28,11 @@ db.connect(err => {
 });
 
 const getLatestData = () => {
-    const tempQuery = "SELECT stt, DATE_FORMAT(date_time, '%H:%i:%s') AS date_time, CPU, SSD FROM temp_sensor ORDER BY date_time DESC LIMIT 10";
-    const batteryQuery = "SELECT stt, DATE_FORMAT(date_time, '%H:%i:%s') AS date_time, charge, voltage FROM battery ORDER BY date_time DESC LIMIT 10";
+    const tempQuery = "SELECT stt, date_time, CPU, SSD FROM temp_sensor ORDER BY date_time DESC LIMIT 10";
+    const batteryQuery = "SELECT stt, date_time, charge, voltage FROM battery ORDER BY date_time DESC LIMIT 10";
     db.query(tempQuery, (err, tempResults) => {
         if (err) {
-          console.error("Errỏ on fetching temp_sensor:", err.message);
+          console.error("Error on fetching temp_sensor:", err.message);
           return;
         }
     

@@ -8,6 +8,7 @@ TCP Port: 1883
 */
 #define ADDRESS     "tcp://broker.emqx.io:1883"
 #define CLIENTID    "publisher_demo"
+// #define SUB_TOPIC   "test/topic1"
 #define PUB_TOPIC   "cdt/topic1"
 #define PUB_TOPIC_2   "cdt/topic2"
 
@@ -56,7 +57,6 @@ int main(int argc, char* argv[]) {
     }
    
     //listen for operation
-    // MQTTClient_subscribe(client, SUB_TOPIC, 0);
     int i = 0;
     while(1) {
         char msg_temp [40];

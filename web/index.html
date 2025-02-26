@@ -159,14 +159,19 @@
         socket.on("sensorData", (data) => {
             console.log("Dữ liệu nhận được:", data);
 
+            // Chuyển đổi date_time sang HH:mm:ss
+            const formatTime = (timestamp) => {
+                return new Date(timestamp).toLocaleTimeString("vi-VN", { hour12: false });
+            };            
+
             // Cập nhật biểu đồ nhiệt độ
-            tempChart.data.labels = data.temp_sensor.map(item => item.date_time);
+            tempChart.data.labels = data.temp_sensor.map(item => formatTime(item.date_time));
             tempChart.data.datasets[0].data = data.temp_sensor.map(item => item.CPU);
             tempChart.data.datasets[1].data = data.temp_sensor.map(item => item.SSD);
             tempChart.update();
 
             // Cập nhật biểu đồ pin
-            batteryChart.data.labels = data.battery.map(item => item.date_time);
+            batteryChart.data.labels = data.battery.map(item => formatTime(item.date_time));
             batteryChart.data.datasets[0].data = data.battery.map(item => item.charge);
             batteryChart.data.datasets[1].data = data.battery.map(item => item.voltage);
             batteryChart.update();
