@@ -59,7 +59,7 @@ Mở trình duyệt và truy cập `http://localhost:3000/` để xem dữ liệ
  ├── 📁 project
  │   ├── pub.c              # Chương trình gửi dữ liệu cảm biến lên MQTT
  │   ├── sub.c              # Chương trình nhận dữ liệu và lưu vào MySQL
- ├── 📁 database
+ ├── 📁 web
  │   ├── server.js          # Server Node.js xử lý dữ liệu và gửi tới client
  │   ├── index.html         # Giao diện web hiển thị dữ liệu
  ├── README.md              # Tài liệu hướng dẫn
