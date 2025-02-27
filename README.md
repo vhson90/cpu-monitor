@@ -51,7 +51,7 @@ gcc sub.c -o sub -lpaho-mqtt3c -lmysqlclient
 node server.js
 ```
 
-Mở trình duyệt và truy cập `http://localhost:3000/` để xem dữ liệu theo thời gian thực.
+Mở file 'index.html' trên trình duyệt để xem dữ liệu cập nhật theo thời gian thực.
 
 ## 📂 Cấu trúc thư mục
 ```
@@ -69,5 +69,3 @@ Mở trình duyệt và truy cập `http://localhost:3000/` để xem dữ liệ
 ## 🔗 Liên kết
 - **GitHub Repo**: [https://github.com/vhson90/cpu-monitor](https://github.com/vhson90/cpu-monitor)
 - **Video Demo**: [https://youtu.be/GS-CXc_Z95Q](https://youtu.be/GS-CXc_Z95Q)
-
-🚀 *Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào, hãy tạo một issue hoặc PR trên GitHub!*
